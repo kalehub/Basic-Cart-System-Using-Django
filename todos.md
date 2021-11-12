@@ -7,6 +7,9 @@
 - '/checkout' for checkout
 ## Models
 [ ] Configure the model
-- login model
+[x] User Registration
+- Registration and Login model
+[Source](https://www.ordinarycoders.com/blog/article/django-user-register-login-logout)
+bootstrap for my 'base.html'
 - product model
 - invoice model
