@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cartapp', # main cart app
+    'crispy_forms', # crispy forms for django built in form
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,6 +125,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# CRISPY FORM CONFIG
+CRISPY_TEMPLATE_PACK = 'uni_form'
+
+
 
 
 # Static files (CSS, JavaScript, Images)
