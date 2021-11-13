@@ -6,7 +6,7 @@
 [x] User Login
 [x] Login Required
 [x] User Logout
-[ ] Product model
+[x] Product model
 [ ] Cart system
 
 - Registration and Login model
