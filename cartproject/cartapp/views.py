@@ -5,11 +5,14 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from .models import Product
 
 # Create your views here.
 @login_required(login_url='cartapp:login')
 def index(request):
-    return render(request, 'cartapp/index.html')
+    # get all object from model
+    products = Product.objects.all()
+    return render(request, 'cartapp/index.html', context={'products':products})
 
 
 
