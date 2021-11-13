@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
-
+@login_required(login_url='cartapp:login')
 def index(request):
     return render(request, 'cartapp/index.html')
 
@@ -38,12 +39,9 @@ def logout_process(request):
 def register_process(request):
     if request.method == 'POST':
         form = NewUserForm(request.POST) # fetch data
-        print('get form data')
         if form.is_valid(): # check if entered data is valid
             user = form.save()
-            print('save form')
             login(request, user) # if success then log in the user
-            print('login form')
             messages.success(request, 'Registration successful')
             return redirect('cartapp:index')
         else:

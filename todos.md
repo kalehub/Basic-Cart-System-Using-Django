@@ -2,9 +2,10 @@
 ## URLS and Views
 [x] Configure the URL and view
 ## Models
-
 [x] User Registration
-[ ] User Login
+[x] User Login
+[x] Login Required
+[x] User Logout
 [ ] Product model
 [ ] Cart system
 
