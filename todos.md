@@ -13,3 +13,6 @@
 [Source](https://www.ordinarycoders.com/blog/article/django-user-register-login-logout)
 - product model
 - invoice model
+
+
+For cart system please [read here](https://blog.kwetuhub.com/developing-shopping-cart-class-shop-products-django-2-0-python-3-6/)
